@@ -9,7 +9,7 @@ COPY src/main/resources/localhost.crt /usr/local/share/ca-certificates/localhost
 RUN update-ca-certificates
 
 # Copia el certificado también para Java y lo importa en el truststore
-COPY localhost.crt /tmp/localhost.crt
+COPY src/main/resources/localhost.crt /tmp/localhost.crt
 RUN keytool -importcert -noprompt \
     -alias localcert \
     -file /tmp/localhost.crt \
