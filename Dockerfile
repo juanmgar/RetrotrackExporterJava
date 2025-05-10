@@ -7,8 +7,11 @@ WORKDIR /app
 # Copia el jar generado
 COPY target/RetrotrackExporterJava-1.0-SNAPSHOT-jar-with-dependencies.jar app.jar
 
-# Copia el archivo WSDL al contenedor
-COPY src/main/resources/user.wsdl /app/user.wsdl
+# Crea la ruta
+RUN mkdir -p /home/runner/work/RetrotrackExporterJava/RetrotrackExporterJava/src/main/resources
+
+# Copia el WSDL al path
+COPY src/main/resources/user.wsdl /home/runner/work/RetrotrackExporterJava/RetrotrackExporterJava/src/main/resources/user.wsdl
 
 # Comando por defecto (sobrescribible desde docker run)
 ENTRYPOINT ["java", "-jar", "app.jar"]
