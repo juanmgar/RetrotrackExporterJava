@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk-alpine
 RUN apk --no-cache add ca-certificates
 
 # Copia e instala el certificado autofirmado
-COPY localhost.crt /usr/local/share/ca-certificates/localhost.crt
+COPY src/main/resources/localhost.crt /usr/local/share/ca-certificates/localhost.crt
 RUN update-ca-certificates
 
 # Crea un directorio para el app
