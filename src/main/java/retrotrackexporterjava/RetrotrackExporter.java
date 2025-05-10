@@ -8,6 +8,9 @@ import java.util.List;
 
 public class RetrotrackExporter {
     public static void main(String[] args) throws Exception {
+
+        // Para permitir el uso de https sin un certificado firmado, he deshabilitado la validación.
+        SSLUtil.disableCertificateValidation();
         String email = null;
         for (int i = 0; i < args.length; i++) {
             if ("--email".equals(args[i]) && i + 1 < args.length) {
