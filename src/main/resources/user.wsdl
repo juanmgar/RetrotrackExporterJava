@@ -68,7 +68,7 @@
 </binding>
 <service name="UserManagementWSService">
 <port name="UserManagementWSPort" binding="tns:UserManagementWSPortBinding">
-<soap:address location="https://localhost:8095/soap/api/user"/>
+<soap:address location="https://retrotrack-soap-api:8095/soap/api/user"/>
 </port>
 </service>
 </definitions>

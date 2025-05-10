@@ -15,7 +15,7 @@ import java.security.cert.X509Certificate;
 import java.util.List;
 
 public class RestClient {
-    private static final String BASE_URL = "https://localhost:9095/rest/api/";
+    private static final String BASE_URL = "https://retrotrack-rest-api:9095/rest/api/";
 
     public static List<Game> getGames(String jwt) throws Exception {
         String json = callApi("Games", jwt);
