@@ -85,7 +85,7 @@
                 <configuration>
                     <packageName>retrotrackexporterjava.soap</packageName>
                     <wsdlUrls>
-                        <wsdlUrl>https://localhost:8095/soap/api/user?wsdl</wsdlUrl>
+                        <wsdlUrl>${basedir}/src/main/resources/user.wsdl</wsdlUrl>
                     </wsdlUrls>
                 </configuration>
             </plugin>
